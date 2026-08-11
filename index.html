@@ -1682,8 +1682,11 @@
         };
 
         document.getElementById('btnConfirmarAcao').onclick = () => {
-            if (acaoConfirmacao) acaoConfirmacao();
-            window.fecharModal();
+            try {
+                if (acaoConfirmacao) acaoConfirmacao();
+            } finally {
+                window.fecharModal();
+            }
         };
 
         function mostrarToast(mensagem, cor = 'bg-gray-900') {
