@@ -1284,11 +1284,11 @@
         window.verificarSenhaAdmin = (event) => {
             if (event && event.type === 'keydown' && event.key !== 'Enter') return;
             const senha = document.getElementById('inputSenhaAdmin').value;
-            if (senha === '1234' || senha === 'admin') { 
+            if (senha === '4512' || senha === 'admin') { 
                 window.fecharModalSenha();
                 window.abrirAdmin();
             } else {
-                mostrarToast('Senha incorreta! Use: 1234', 'bg-red-600 text-white');
+                mostrarToast('Senha incorreta! Use: 4512', 'bg-red-600 text-white');
             }
         };
 
